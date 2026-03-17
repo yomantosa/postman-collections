@@ -6,6 +6,26 @@
 	},
 	"item": [
 		{
+			"name": "Books",
+			"item": [],
+			"id": "b202101a-533d-462e-845e-56941181b7de"
+		},
+		{
+			"name": "Users",
+			"item": [],
+			"id": "74f6305b-5c97-4292-914b-3c5af8a14e64"
+		},
+		{
+			"name": "Libraries",
+			"item": [],
+			"id": "eb72ec6f-0d8c-473d-bedd-adbc3ec9c251"
+		},
+		{
+			"name": "Borrowings",
+			"item": [],
+			"id": "96037e77-c883-497a-98d5-48bfc63a2767"
+		},
+		{
 			"name": "get param books",
 			"id": "44e24a84-2381-45ab-bd9d-5eb81f6f5a42",
 			"protocolProfileBehavior": {
@@ -15,15 +35,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8090/api/v1/books?title=cLean code",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/v1/books?title=cLean code",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{baseUrl}}"
 					],
-					"port": "8090",
 					"path": [
 						"api",
 						"v1",
@@ -48,7 +63,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/books/1"
+				"url": "{{baseUrl}}/api/v1/books/1"
 			},
 			"response": []
 		},
@@ -61,7 +76,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/books"
+				"url": "{{baseUrl}}/api/v1/books"
 			},
 			"response": []
 		},
@@ -74,7 +89,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/books/1"
+				"url": "{{baseUrl}}/api/v1/books/1"
 			},
 			"response": []
 		},
@@ -101,7 +116,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8090/api/v1/books"
+				"url": "{{baseUrl}}/api/v1/books"
 			},
 			"response": []
 		},
@@ -114,7 +129,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/users"
+				"url": "{{baseUrl}}/api/v1/users"
 			},
 			"response": []
 		},
@@ -127,7 +142,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/users/3"
+				"url": "{{baseUrl}}/api/v1/users/3"
 			},
 			"response": []
 		},
@@ -149,7 +164,7 @@
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8090/api/v1/users"
+				"url": "{{baseUrl}}/api/v1/users"
 			},
 			"response": []
 		},
@@ -166,7 +181,7 @@
 					"mode": "raw",
 					"raw": "{\n    \"name\" : \"Kita\",\n    \"email\" : \"kita@gmail.com\"\n}"
 				},
-				"url": "http://127.0.0.1:8090/api/v1/users/2"
+				"url": "{{baseUrl}}/api/v1/users/2"
 			},
 			"response": []
 		},
@@ -179,7 +194,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/users/2/borrowed-books"
+				"url": "{{baseUrl}}/api/v1/users/2/borrowed-books"
 			},
 			"response": []
 		},
@@ -192,7 +207,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/libraries"
+				"url": "{{baseUrl}}/api/v1/libraries"
 			},
 			"response": []
 		},
@@ -205,7 +220,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/libraries/1"
+				"url": "{{baseUrl}}/api/v1/libraries/1"
 			},
 			"response": []
 		},
@@ -218,7 +233,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/libraries/1/books"
+				"url": "{{baseUrl}}/api/v1/libraries/1/books"
 			},
 			"response": []
 		},
@@ -231,7 +246,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "http://127.0.0.1:8090/api/v1/libraries/1"
+				"url": "{{baseUrl}}/api/v1/libraries/1"
 			},
 			"response": []
 		},
@@ -253,7 +268,7 @@
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8090/api/v1/libraries"
+				"url": "{{baseUrl}}/api/v1/libraries"
 			},
 			"response": []
 		},
@@ -275,7 +290,7 @@
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8090/api/v1/libraries/1/books"
+				"url": "{{baseUrl}}/api/v1/libraries/1/books"
 			},
 			"response": []
 		},
@@ -322,6 +337,12 @@
 				"url": "http://127.0.0.1:8090/api/v1/borrowings/3/return"
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": ""
 		}
 	]
 }
