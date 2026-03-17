@@ -10,6 +10,26 @@
 			"item": [
 				{
 					"name": "delete books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200 or 204', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        200,",
+									"        204",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "4486fc31-f758-4706-b0aa-e90c3af12ce2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -23,6 +43,32 @@
 				},
 				{
 					"name": "post books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 201', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "cf818f64-fa25-46b4-824e-5c7834be5ff8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -50,6 +96,32 @@
 				},
 				{
 					"name": "get param books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an array', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "44e24a84-2381-45ab-bd9d-5eb81f6f5a42",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -79,6 +151,32 @@
 				},
 				{
 					"name": "get book by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "31ce2bc2-e13a-41ca-b6bd-422db90a6271",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -92,6 +190,32 @@
 				},
 				{
 					"name": "get books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an array', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "8e1a1a20-ba2a-4677-9885-3b8d297182fb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -111,6 +235,32 @@
 			"item": [
 				{
 					"name": "get user borrowed book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "9503ed7f-33f8-4d50-92f2-98b0063a981f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -124,6 +274,26 @@
 				},
 				{
 					"name": "delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200 or 204', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        200,",
+									"        204",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "7d22f012-4bf6-4eec-9232-cf36dc62cad3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -141,6 +311,32 @@
 				},
 				{
 					"name": "post users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 201', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "643ed2d5-60ce-485a-b7df-d655d44a93de",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -163,6 +359,32 @@
 				},
 				{
 					"name": "get users by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "d1dcb60c-158e-4b6a-b5bc-d6898cef3c3f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -176,6 +398,32 @@
 				},
 				{
 					"name": "get users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an array', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "41cb1d82-17a0-4474-94f8-646072eebe1e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -195,6 +443,26 @@
 			"item": [
 				{
 					"name": "delete all library by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200 or 204', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        200,",
+									"        204",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "4ea8fdd1-1cc5-419a-9f85-c84ae888494a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -208,6 +476,32 @@
 				},
 				{
 					"name": "post books to lib by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 201', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "a734f059-db10-47cf-b44c-6aca27b8b9b9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -230,6 +524,32 @@
 				},
 				{
 					"name": "post library",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 201', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "accc9c66-f81e-431b-8602-d62c999e6c15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -252,6 +572,32 @@
 				},
 				{
 					"name": "get all books from lib by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "4c15ae42-9e11-499a-943d-71cfd80c16c2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -265,6 +611,32 @@
 				},
 				{
 					"name": "get all library by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "ac2ff0d0-aaa6-49aa-9f1f-8d201c057a3d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -278,6 +650,32 @@
 				},
 				{
 					"name": "get all library",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an array', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "8f0f8bac-59c6-4b73-b83f-d20fe99f86a8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -297,6 +695,32 @@
 			"item": [
 				{
 					"name": "return borrowed book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "39a8ccfa-f1a8-42cc-92c9-06c852f3c133",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -319,6 +743,32 @@
 				},
 				{
 					"name": "borrowing book",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 201', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Response is JSON', function () {",
+									"    pm.response.to.be.json;",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response time is acceptable', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
 					"id": "8aaa25fc-5d79-461c-8184-dcec1c497db4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
