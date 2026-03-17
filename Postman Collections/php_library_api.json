@@ -793,10 +793,37 @@
 			"id": "96037e77-c883-497a-98d5-48bfc63a2767"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "572906bd-3fff-46cf-96d5-4b9938390c7a",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "46db7d35-baf2-42cf-af01-28a9c73cb91f",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": ""
+			"value": "",
+			"disabled": true
 		}
 	]
 }
