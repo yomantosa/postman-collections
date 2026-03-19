@@ -1083,7 +1083,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "1860b327-a734-4819-ab65-89a74d8c0574",
 										"exec": [
 											"pm.test('Status code is 200 or 204', function () {",
 											"    pm.expect(pm.response.code).to.be.oneOf([",
@@ -1095,7 +1095,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1110,7 +1113,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"name\" : \"Kita\",\n    \"email\" : \"kita@gmail.com\"\n}"
 								},
-								"url": "{{baseUrl}}/api/v1/users/2"
+								"url": "{{baseUrl}}/api/v2/users/5"
 							},
 							"response": []
 						},
@@ -1253,7 +1256,7 @@
 					"id": "311e6cae-b984-41e1-a935-b806b9d375ff"
 				},
 				{
-					"name": "Libraries Copy",
+					"name": "Libraries v2",
 					"item": [
 						{
 							"name": "delete all library by id",
@@ -1342,7 +1345,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "f96f0001-0395-4fa1-9e68-e1de61ff8029",
 										"exec": [
 											"pm.test('Status code is 201', function () {",
 											"    pm.response.to.have.status(201);",
@@ -1360,7 +1363,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1380,7 +1386,7 @@
 										}
 									}
 								},
-								"url": "{{baseUrl}}/api/v1/libraries"
+								"url": "{{baseUrl}}/api/v2/libraries"
 							},
 							"response": []
 						},
@@ -1390,7 +1396,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "0af039e1-8540-4c68-86f1-cc021f5b6ad0",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1408,7 +1414,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1419,7 +1428,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/libraries/1/books"
+								"url": "{{baseUrl}}/api/v2/libraries/1/books"
 							},
 							"response": []
 						},
@@ -1429,7 +1438,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "d14fd003-a0d4-43a2-a1ff-f0468981c112",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1447,7 +1456,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1458,7 +1470,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/libraries/1"
+								"url": "{{baseUrl}}/api/v2/libraries/1"
 							},
 							"response": []
 						},
@@ -1468,7 +1480,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "086cb43a-a435-45a3-9bbc-6df76144ad5b",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1486,7 +1498,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1497,7 +1512,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/libraries"
+								"url": "{{baseUrl}}/api/v2/libraries"
 							},
 							"response": []
 						}
