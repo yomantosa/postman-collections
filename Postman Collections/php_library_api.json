@@ -1264,7 +1264,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "9e64e4a1-03cd-4120-99ee-a49937cf328b",
 										"exec": [
 											"pm.test('Status code is 200 or 204', function () {",
 											"    pm.expect(pm.response.code).to.be.oneOf([",
@@ -1276,7 +1276,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1287,7 +1290,7 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/libraries/1"
+								"url": "{{baseUrl}}/api/v2/libraries/4"
 							},
 							"response": []
 						},
@@ -1297,7 +1300,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "9ee68d95-7021-4295-8217-c6e552cf33ce",
 										"exec": [
 											"pm.test('Status code is 201', function () {",
 											"    pm.response.to.have.status(201);",
@@ -1315,7 +1318,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1335,7 +1341,7 @@
 										}
 									}
 								},
-								"url": "{{baseUrl}}/api/v1/libraries/1/books"
+								"url": "{{baseUrl}}/api/v2/libraries/2/books"
 							},
 							"response": []
 						},
@@ -1428,7 +1434,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v2/libraries/1/books"
+								"url": "{{baseUrl}}/api/v2/libraries/2/books"
 							},
 							"response": []
 						},
@@ -1520,7 +1526,7 @@
 					"id": "acbf9714-aa3d-4b3d-8dc4-336a88f41af6"
 				},
 				{
-					"name": "Borrowings Copy",
+					"name": "Borrowings v2",
 					"item": [
 						{
 							"name": "return borrowed book",
