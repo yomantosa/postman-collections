@@ -1161,7 +1161,7 @@
 										}
 									}
 								},
-								"url": "{{baseUrl}}/api/v1/users"
+								"url": "{{baseUrl}}/api/v2/users"
 							},
 							"response": []
 						},
