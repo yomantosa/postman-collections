@@ -1582,7 +1582,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "c2aafe03-f1d6-455c-aeb7-59607fe11ce0",
 										"exec": [
 											"pm.test('Status code is 201', function () {",
 											"    pm.response.to.have.status(201);",
@@ -1600,7 +1600,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1618,9 +1621,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"user_id\": 1,\n  \"book_id\": 3\n}"
+									"raw": "{\n  \"user_id\": 2,\n  \"book_id\": 1\n}"
 								},
-								"url": "{{baseUrl}}/api/v1/borrowings"
+								"url": "{{baseUrl}}/api/v2/borrowings"
 							},
 							"response": []
 						}
