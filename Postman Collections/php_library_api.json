@@ -804,7 +804,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "eff5326e-b838-4049-812d-22b274b9e1d3",
 										"exec": [
 											"pm.test('Status code is 200 or 204', function () {",
 											"    pm.expect(pm.response.code).to.be.oneOf([",
@@ -816,7 +816,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -827,7 +830,7 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/books/1"
+								"url": "{{baseUrl}}/api/v2/books/6"
 							},
 							"response": []
 						},
@@ -876,7 +879,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\"title\":\"Refactoring\",\"author\":\"Martin Fowler\"}",
+									"raw": "{\"title\":\"Emperor Hito II\",\"author\":\"Hito\", \"library_id\":\"2\"}",
 									"options": {
 										"raw": {
 											"language": "json"
