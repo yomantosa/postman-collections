@@ -1044,7 +1044,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "d3819cc3-72ee-4e26-afa3-f62f1f92c605",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1062,7 +1062,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1073,7 +1076,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/users/2/borrowed-books"
+								"url": "{{baseUrl}}/api/v2/users/2/borrowed-books"
 							},
 							"response": []
 						},
