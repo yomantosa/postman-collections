@@ -879,7 +879,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\"title\":\"Emperor Hito II\",\"author\":\"Hito\", \"library_id\":\"2\"}",
+									"raw": "{\"title\":\"Emperor Hito II\",\"author\":\"Hito\", \"library_id\":2}",
 									"options": {
 										"raw": {
 											"language": "json"
