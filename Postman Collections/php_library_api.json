@@ -1076,7 +1076,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v2/users/2/borrowed-books"
+								"url": "{{baseUrl}}/api/v2/users/1/borrowed-books"
 							},
 							"response": []
 						},
@@ -1537,7 +1537,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "7d937353-77de-438e-a1f6-3c298b232949",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1555,7 +1555,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1575,7 +1578,7 @@
 									"mode": "raw",
 									"raw": "{\n  \"returned_at\": \"2026-03-20\"\n}"
 								},
-								"url": "{{baseUrl}}/api/v1/borrowings/3/return"
+								"url": "{{baseUrl}}/api/v2/borrowings/5/return"
 							},
 							"response": []
 						},
