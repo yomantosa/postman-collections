@@ -830,7 +830,7 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{baseUrl}}/api/v2/books/6"
+								"url": "{{baseUrl}}/api/v2/books/8"
 							},
 							"response": []
 						},
@@ -1036,7 +1036,7 @@
 					"id": "58f745d3-1d02-411f-9686-a173d5292d69"
 				},
 				{
-					"name": "Users Copy",
+					"name": "Users v2",
 					"item": [
 						{
 							"name": "get user borrowed book",
@@ -1120,7 +1120,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "adb68904-b467-47c7-8228-4380ddf91304",
 										"exec": [
 											"pm.test('Status code is 201', function () {",
 											"    pm.response.to.have.status(201);",
@@ -1138,7 +1138,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1151,7 +1154,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\" : \"Kita\",\n    \"email\" : \"kita@gmail.com\"\n}",
+									"raw": "{\n    \"name\" : \"Hito\",\n    \"email\" : \"Hito@gmail.com\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1168,7 +1171,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "8153bff5-2aff-455b-bcec-cdd471eaaa88",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1186,7 +1189,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1197,7 +1203,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/users/3"
+								"url": "{{baseUrl}}/api/v2/users/2"
 							},
 							"response": []
 						},
@@ -1207,7 +1213,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
+										"id": "8fda287c-7657-401f-93cd-910bbd3b1379",
 										"exec": [
 											"pm.test('Status code is 200', function () {",
 											"    pm.response.to.have.status(200);",
@@ -1225,7 +1231,10 @@
 											"pm.test('Response time is acceptable', function () {",
 											"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 											"})"
-										]
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -1236,7 +1245,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{baseUrl}}/api/v1/users"
+								"url": "{{baseUrl}}/api/v2/users"
 							},
 							"response": []
 						}
