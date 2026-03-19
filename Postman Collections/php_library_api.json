@@ -1621,7 +1621,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"user_id\": 2,\n  \"book_id\": 1\n}"
+									"raw": "{\n  \"user_id\": 2,\n  \"book_id\": 1,\n  \"borrowed_at\": \"2026-03-20\"\n}"
 								},
 								"url": "{{baseUrl}}/api/v2/borrowings"
 							},
